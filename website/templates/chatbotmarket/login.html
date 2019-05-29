@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+	{% block head %}
+	<title>Home</title>
+	{% endblock %}
+</head>
+<body>
+	{% block body %}
+
+<!-- navigation menu -->
+  <div class="page-title">
+      <div class="container">
+        <div class="column">
+          <h1>Login / Register Account</h1>
+        </div>
+        <div class="column">
+          <ul class="breadcrumbs">
+            <li><a href="#">Home</a>
+            </li>
+            <li class="separator">&nbsp;&gt;&nbsp;</li>
+            <li><a href="">Account</a>
+            </li>
+            <li class="separator">&nbsp;&gt;&nbsp;</li>
+            <li>Login / Register</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+  <!-- page content -->
+
+  <div class="container pb-3 mb-2">
+    <div class="row">
+      <div class="col-md-6">
+          <form class="card" method="post">
+            <div class="card-body">
+              <div class="row mb-4">
+                <div class="col"><a class="btn btn-sm btn-block facebook-btn logbtn " href="#"><i class="socicon-facebook"></i>&nbsp;Facebook login</a></div>
+                <div class="col"><a class="btn btn-sm btn-block twitter-btn logbtn" href="#"><i class="socicon-twitter"></i>&nbsp;Twitter login</a></div>
+                <div class="col"><a class="btn btn-sm btn-block google-btn logbtn" href="#"><i class="socicon-googleplus"></i>&nbsp;Google+ login</a></div>
+              </div>
+              <h4 class="mb-3">Or using form below</h4>
+              <div class="form-group input-group">
+                <input class="form-control" type="email" placeholder="Email" required="">
+                  <span class="input-group-addon">
+                    <svg id="i-mail" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                      <path d="M2 26 L30 26 30 6 2 6 Z M2 6 L16 16 30 6" />
+                    </svg>
+                  </span>
+              </div>
+              <div class="form-group input-group">
+                <input class="form-control" type="password" placeholder="Password" required="">
+                  <span class="input-group-addon">
+                    <svg id="i-lock" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
+                      <path d="M5 15 L5 30 27 30 27 15 Z M9 15 C9 9 9 5 16 5 23 5 23 9 23 15 M16 20 L16 23" />
+                      <circle cx="16" cy="24" r="1" />
+                    </svg>
+                  </span>
+              </div>
+              <div class="d-flex flex-wrap justify-content-between pb-1">
+                <div class="custom-control custom-checkbox">
+                  <input class="custom-control-input" type="checkbox" id="remember_me" checked="">
+                  <label class="custom-control-label" for="remember_me">Remember me</label>
+                </div><a class="navi-link" href="account-password-recovery.html">Forgot password?</a>
+              </div>
+              <div class="text-center text-sm-right">
+                <button class="btn btn-primary mb-0" type="submit">Login</button>
+              </div>
+            </div>
+          </form>
+      </div>
+      <div class="col-md-6 pt-5">
+        <h3 class="mb-3">No Account? Register</h3>
+        <p>Registration takes less than a minute but gives you full control over your orders.</p>
+        <form class="row" method="post">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="reg-fn">Name</label>
+              <input class="form-control" type="text" id="reg-fn" required="">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="reg-email">E-mail Address</label>
+              <input class="form-control" type="email" id="reg-email" required="">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="reg-pass">Password</label>
+              <input class="form-control" type="password" id="reg-pass" required="">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="reg-pass-confirm">Confirm Password</label>
+              <input class="form-control" type="password" id="reg-pass-confirm" required="">
+            </div>
+          </div>
+          <div class="col-12 text-center text-sm-right">
+            <button class="btn btn-primary margin-bottom-none" type="submit">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+ 
+
+  
+  {% endblock %}
+</body>
+</html>
+
