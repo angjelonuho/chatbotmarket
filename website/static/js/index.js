@@ -4,11 +4,11 @@ var colorPalette = ["#ffffff", "#000000", "#00f9d9", "#009DF9"];
 var uploadLoading = false;
 
 function preload() {
-    audio = loadSound("../../static/media/fly.mp3");
+    //audio = loadSound("../../static/media/fly.mp3");
 }
 
 function setup() {
-
+ 
     uploadAnim = select('#uploading-animation');
 
     createCanvas(windowWidth, windowHeight);
