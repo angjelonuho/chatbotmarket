@@ -11,15 +11,11 @@ def login(request):
 	return render (request , 'chatbotmarket/login.html')
 def account(request):
 	return render (request , 'chatbotmarket/account.html')
+	
+def fanmarket(request):
+    return render (request , 'fanmarket/index.html')
 
 
-class HomeView(TemplateView):
-	"""docstring for HomeView"""
-	template_name = 'chatbotmarket/index.html'
-
-	def get(self,request):
-		form = HomeForm()
-		return render(request,self.template_name, {'form':form})
 
 
 

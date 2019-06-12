@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+	{% block head %}
+	<title>fanmarket</title>
+	{% endblock %}
+
+	{% block body %}
+<div class="container-fluid">
+  <div class="row">
+  <div class="col-sm-9">
+  <!-- ###### INPUT FOR THE CHATBOT ###### -->
+  <div class="input-group wrap" id="main">
+    <div class="mat-div">
+    <div id="botchat">Chatbot: <span id="chatbot"></span></div>
+      <input type="text" class="mat-input" id="file-input" placeholder="Ask Something..." autocomplete="off">
+    </div>
+  </div>
+  <form  method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+  </form>
+  <div class="justify-content-md-center">      
+    <canvas id="webglcanvas"></canvas>
+      <div id="p5_loading" class="p5_loading">
+        <div class="p5_loading__inner">
+          <span></span>
+        </div>
+      </div>
+      <div id="uploading-animation" class="p5_loading">
+        <div class="p5_loading__inner">
+          <span></span>
+        </div>
+      </div>
+  </div>
+    </div>
+
+        <div class="col-sm-3">
+<!-- style attributes are temporary -->
+
+          <div class="media fanmarketMedia" style="opacity: 1; max-height: 200px; transform: translateX(0px) scale(1);">
+            <img src="#" class="mr-3 fanmarketImage" style="background-color: rgb(186, 94, 186); opacity: 1; transform: translateY(0px);" alt="...">
+            <div class="media-body fanmarketBody">
+               <h5 class="mt-0">Media heading</h5>
+                 Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+            </div>
+          </div>
+
+
+
+          <div class="input-group fanChatfileInputGroup sticky-bottom">
+           
+            <a href="#" id="#file-input" class="btn fanChatfileInput" role="button">
+              <i class="material-icons mt-1 crop_square">crop_square</i>           
+            </a>
+            <input type="text" id="chat-input" class="form-control fanChatInput" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+        </div>  
+
+
+    </div>
+</div>  
+     
+    {% endblock %}
+

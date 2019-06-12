@@ -1,5 +1,5 @@
 body {
-
+ 
 }
 
 /*   ### ### ### ### ###   NAVIGATION BAR    ### ### ### ### ###*/
@@ -9,12 +9,24 @@ nav {
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   box-shadow: 0px 2px 3px grey;
+
 }
 
+.fanmrk {
+  font-family: Cousine;
+  font-size: 16px;
+  letter-spacing: 2px;
+  fill: rgb(255, 255, 255);
+  font-style: normal;
+  background-color: rgb(249, 89, 89);
+}
 .shopping_cart {
   background-color: #333;
+  padding: 0;
 }
-
+.form-inline{
+  flex-flow: nowrap;
+}
 
 .material-icons {
   font-family: 'Material Icons';
@@ -49,19 +61,6 @@ nav {
 
 /*   ### ### ### ### ###   INDEX    ### ### ### ### ###*/
 
-h2 {
-  font-weight: 350;
-}
-
-h3 {
-  font-weight: 300;
-}
-
-h4 {
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 1.3;
-}
 
 /*--------------------------- EYE ---------------------------*/
 .hidden {
@@ -146,92 +145,43 @@ canvas {
 }
 /*--------------------------- CHAT ---------------------------*/
 
+/*Chat Input*/
+
+
+.fanChatInput{
+  background-color: rgba(0, 0, 0, 0.8);
+  border:0px !important;
+}
+.fanChatInput:focus{
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+.fanChatfileInput {
+  border-right: 2px solid #17a2b8;
+  background-color: rgba(0, 0, 0, 0.8);
+   border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+
+}
+.fanChatfileInput:focus{
+   box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+.crop_square{
+  font-size: 14px;
+}
 
 
 
+/*Chat Input*/
 
-#chat-input {
-  position: fixed;
-  bottom: 10px;
-  height: 40px;
-  width: 500px;
-  background-color: #242424;
+
+/*Chat Media*/
+
+.fanmarketMedia{
   border-radius: 6px;
   overflow: hidden;
-}
-#chat-input:before, #chat-input:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 12px;
-  bottom: 12px;
-  background-color: rgba(56, 56, 56, 0.4);
-}
-#chat-input:before {
-  cursor: text;
-  left: 52px;
-  width: 40%;
-  border-radius: 2px;
-}
-#chat-input:after {
-  cursor: pointer;
-  right: 10px;
-  width: 16px;
-  border-radius: 8px;
-}
-#chat-input #file-input {
-  cursor: pointer;
-  display: block;
-  border-right: 2px solid #292929;
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  bottom: 2px;
-  width: 36px;
-  transition: background-color 60ms;
-}
-#chat-input #file-input:hover {
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 40px;
-  background-color: #474747;
-  border-right: 0;
-  transition: background-color 120ms;
-}
-#chat-input #file-input:before, #chat-input #file-input:after {
-  content: '';
-  display: block;
-  position: absolute;
-  background-color: #383838;
-}
-#chat-input #file-input:before {
-  top: 30%;
-  bottom: 30%;
-  left: 50%;
-  width: 2px;
-  margin-left: -1px;
-}
-#chat-input #file-input:after {
-  left: 30%;
-  right: 30%;
-  top: 50%;
-  height: 2px;
-  margin-top: -1px;
-}
-
-.chat {
-  position: fixed;
-  bottom: 60px;
-  width: 500px;
-  display: inline-block;
-}
-
-.line-container {
-  overflow: hidden;
-  border-radius: 6px;
   max-height: 0px;
-  opacity: 0;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
   -webkit-transform: translateX(-300px) scale(0.2);
           transform: translateX(-300px) scale(0.2);
   transition: margin-bottom 200ms, max-height 500ms, opacity 100ms, -webkit-transform 250ms;
@@ -239,20 +189,12 @@ canvas {
   transition: margin-bottom 200ms, max-height 500ms, opacity 100ms, transform 250ms, -webkit-transform 250ms;
   transition-timing-function: ease-out;
 }
-.line-container:not(:last-child) {
+
+.fanmarketMedia:not(:last-child) {
   margin-bottom: 10px;
 }
 
-.line {
-  padding: 10px;
-  background-color: #242424;
-}
-.line > div {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.profile-img {
+.fanmarketImage{
   cursor: pointer;
   border-radius: 6px;
   width: 60px;
@@ -260,13 +202,11 @@ canvas {
   background-color: #383838;
   margin-right: 10px;
 }
+.fanmarketBody{
+  color: #dad8de;
 
-.body .name,
-.body .text {
-  border-radius: 2px;
-  background-color: #474747;
-  height: 16px;
 }
+
 
 .name {
   width: 100px;
@@ -344,6 +284,8 @@ canvas {
 }
 
 
+
+/*Chat Media*/
 
 
 

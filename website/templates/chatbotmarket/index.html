@@ -5,48 +5,7 @@
 	{% endblock %}
 
 	{% block body %}
-      <div class="container-fluid">
-        <div class="row">
-           <div class="col-sm-9">
- <!-- ###### INPUT FOR THE CHATBOT ###### -->
-  <div class="input-group wrap" id="main">
-    <div class="mat-div">
-    <div id="botchat">Chatbot: <span id="chatbot"></span></div>
-      <input type="text" class="mat-input" id="file-input" placeholder="Ask Something..." autocomplete="off">
-    </div>
-  </div>
-  <form  method="post">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Submit">
-  </form>
-        <div class="justify-content-md-center">
-                     
-             <canvas id="webglcanvas"></canvas>
-        <div id="p5_loading" class="p5_loading">
-          <div class="p5_loading__inner">
-            <span></span>
-          </div>
-        </div>
-        <div id="uploading-animation" class="p5_loading">
-          <div class="p5_loading__inner">
-            <span></span>
-          </div>
-        </div>
-
-        </div>
-        </div>
-
-        <div class="col-sm-3">
-        <div id="chat-container" >
-        <div id="chat-input">
-        <div id="file-input"></div>
-        </div>
-        </div>
-      </div>  
-      
-      </div>
-      </div>  
      
-    {% endblock %}
+     
+  {% endblock %}
 
