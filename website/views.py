@@ -14,7 +14,7 @@ def account(request):
 def support(request):
     return render (request , 'chatbotmarket/support.html')
 def fanmarket(request):
-    return render (request , 'fanmarket/index.html')
+    return render (request , 'fanmarket/fanmarket.html')
 
 
 

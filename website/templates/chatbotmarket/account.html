@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
-<!DOCTYPE html>
-<html>
 
-<head> {% block head %} <title>Home</title> {% endblock %} </head>
+ {% block head %} 
+ <title>Home</title> 
+ <!-- Load static css files -->
+ {% load static %}
+ <link rel="stylesheet"  href="{% static 'css/account.css' %}" type="text/css">
+ {% endblock %} 
 
-<body> {% block body %}
+{% block body %}
   <!-- navigation menu -->
   <div class="page-title">
     <div class="container">
@@ -285,7 +288,5 @@
           </div> <!-- tab-content  -->
         </div><!-- col-lg-8 -->
       </div> <!-- row -->
-    </div> <!-- container --> {% endblock %}
-</body>
-
-</html>
+    </div> <!-- container -->
+{% endblock %}

@@ -2,6 +2,9 @@
 
 	{% block head %}
 	<title>fanmarket</title>
+  <!-- Load static css files -->
+  {% load static %}
+  <link rel="stylesheet"  href="{% static 'css/fanmarket.css' %}" type="text/css">
 	{% endblock %}
 
 	{% block body %}
