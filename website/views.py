@@ -11,9 +11,11 @@ def login(request):
 	return render (request , 'chatbotmarket/login.html')
 def account(request):
 	return render (request , 'chatbotmarket/account.html')
-	
+def support(request):
+    return render (request , 'chatbotmarket/support.html')
 def fanmarket(request):
     return render (request , 'fanmarket/index.html')
+
 
 
 
