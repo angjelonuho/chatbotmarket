@@ -1,4 +1,18 @@
-/*   ### ### ### ### ###   NAVIGATION BAR    ### ### ### ### ###*/
+   ### ### ### ### ###   NAVIGATION BAR    ### ### ### ### ###*/
+
+body
+{
+    background-position: center;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #505050;
+    font-family: "Rubik",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.5;
+    text-transform: none;
+}
 nav {
   background-color: rgba(0, 0, 0, 0.8);
   width: 50%;
@@ -128,5 +142,52 @@ nav {
   font-size: 16px;
 }
 
+/*ACcount*/
+.dropdown-menu {
+    margin-top: 0px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    display: block;
+    transform: scale(0);
+    transition: ease-out 0.3s;
+     
+       width: 200px;
+       padding: 10px 0;
+       border: 1px solid #FFF;
+       border-bottom-right-radius: 5px;
+       border-bottom-left-radius: 5px;
+       background-color: #fff;
+       line-height: 1.5;
+       box-shadow: 0 7px 22px -5px rgba(0,0,0,0.2);
+}
 
-/* #################  ./SECOND MENU  ######################## */
+.acc:hover{
+ text-decoration: none !important;
+ font-style: none;
+}
+.dropdown-menu>li>a{
+
+  display: block;
+  position: relative;
+  padding: 6px 20px !important;
+  transition: color .3s;
+  color: #505050;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: left;
+  text-decoration: none;
+}
+.dropdown-menu>li>a:hover{
+   color: #05f !important;
+}
+.dropdown:hover 
+{
+  display: block;
+  top: 100%;
+  height: inherit;
+
+}
+.dropdown:hover .dropdown-menu {
+    transform: scale(1);
+}
+/* #################  ./SECOND MENU  ######################## 
