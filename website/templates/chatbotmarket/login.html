@@ -39,9 +39,9 @@
           <form class="card" method="post">
             <div class="card-body">
               <div class="row mb-4">
-                <div class="col"><a class="btn btn-sm btn-block facebook-btn logbtn " href="#"><i class="socicon-facebook"></i>&nbsp;Facebook login</a></div>
-                <div class="col"><a class="btn btn-sm btn-block twitter-btn logbtn" href="#"><i class="socicon-twitter"></i>&nbsp;Twitter login</a></div>
-                <div class="col"><a class="btn btn-sm btn-block google-btn logbtn" href="#"><i class="socicon-googleplus"></i>&nbsp;Google+ login</a></div>
+                <div class="col"><a class="btn btn-sm btn-block facebook-btn logbtn " href="#"><i class="socicon-facebook"></i>&nbsp;Sign up using Facebook</a></div>
+                <div class="col"><a class="btn btn-sm btn-block twitter-btn logbtn" href="#"><i class="socicon-twitter"></i>&nbsp;Sign up using Twitter</a></div>
+                <div class="col"><a class="btn btn-sm btn-block google-btn logbtn" href="#"><i class="socicon-google"></i>&nbsp;Sign up using Google</a></div>
               </div>
               <h4 class="mb-3">Or using form below</h4>
               <div class="form-group input-group">
@@ -76,14 +76,36 @@
       <div class="col-md-6 pt-5">
         <h3 class="mb-3">No Account? Register</h3>
         <p>Registration takes less than a minute but gives you full control over your orders.</p>
-        <form class="row" method="post">
-          <div class="col-sm-6">
+        <form class="row" action="{url 'login'}" method="POST">
+        <!-- cross site request forgery added for extra security  -->
+        {% csrf_token %}
+        
+        {% for field in form %}
+         <div class="col-sm-6">
             <div class="form-group">
-              <label for="reg-fn">Name</label>
-              <input class="form-control" type="text" id="reg-fn" required="">
+
+              {% for non_field_error in form.non_field.errors %}
+                <p class="help is-danger">{{non_field_error}}</p>
+              {% endfor %}
+                
+              <label for="{{field.id_for_label}}">{{field.html_name}}</label>
+
+              {{ field }}
+              
+              {% if field.help_text %}
+               <small class="form-text text-muted">{{ field.help_text }}</small>
+              {% endif %}
+
+              {% for error in field.errors %}
+                <p class="help is-danger">{{error}}</p>
+              {% endfor %}
+
+             
             </div>
           </div>
-          <div class="col-sm-6">
+        {% endfor %}
+
+            <!--<div class="col-sm-6">
             <div class="form-group">
               <label for="reg-email">E-mail Address</label>
               <input class="form-control" type="email" id="reg-email" required="">
@@ -100,7 +122,7 @@
               <label for="reg-pass-confirm">Confirm Password</label>
               <input class="form-control" type="password" id="reg-pass-confirm" required="">
             </div>
-          </div>
+          </div> -->
           <div class="col-12 text-center text-sm-right">
             <button class="btn btn-primary margin-bottom-none" type="submit">Register</button>
           </div>
@@ -108,8 +130,5 @@
       </div>
     </div>
   </div>
- 
-
-  
 {% endblock %}
 
