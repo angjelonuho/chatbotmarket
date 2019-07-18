@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 
+  <!-- remove on some pages -->
+
+
   <script>
   document.documentElement.className = 'js';
   </script>
@@ -27,16 +30,11 @@
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
 
-
-
-
-
-
-    
 </head>
 <body>
-	<!-- Navigation Bar -->
+<!-- Navigation Bar -->
 <nav class="navbar navbar-dark mx-auto navbar-expand-xl">
+
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -78,9 +76,9 @@
         <li class="nav-link text-light dropdown">
         <a class="text-light acc" class="dropdown-toggle"  href="{% url 'account' %}">Account</a>
           <ul class="dropdown-menu">
-            <li><a href="../account-login.html">Login / Register</a></li>
-            <li><a href="../account-password-recovery.html">Password Recovery</a></li>
-            <li><a href="../account-orders.html">Orders List</a></li>
+            <li><a href="{% url 'account' %}">Login / Register</a></li>
+            <li><a href="{% url 'account' %}">Password Recovery</a></li>
+            <li><a href="{% url 'account' %}">Orders List</a></li>
             <li><a href="../account-wishlist.html">Wishlist</a></li>
             <li><a href="../account-profile.html">Profile Page</a></li>
             <li><a href="../account-address.html">Contact / Shipping Address</a></li>
@@ -91,6 +89,17 @@
       </form>
 
 </nav>
+<!-- Messages -->
+<div class="col-sm-3 messageContainer text-center" >
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert messageBody alert-{{message.tags }}">
+          {{message}}
+        </div> 
+      {% endfor %}
+    {% endif %}
+
+</div>
 	{% block body %}
 
 	{% endblock %}
